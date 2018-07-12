@@ -29,9 +29,14 @@ For example:
 ```
 
 ## Examples
+
 ![sample image](https://i.imgur.com/9hQujNk.png)
 
-View the [examples folder](https://github.com/pshihn/rough-paint/tree/master/examples).
+[Simple example - Live](https://pshihn.github.io/rough-paint/examples/basic.html)
+
+[Rough Boxes - Live](https://pshihn.github.io/rough-paint/examples/boxes.html)
+
+View the source code in the [examples folder](https://github.com/pshihn/rough-paint/tree/master/examples).
 
 ## CSS Properties
 
