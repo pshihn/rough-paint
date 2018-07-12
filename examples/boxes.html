@@ -49,6 +49,13 @@
       --rough-hachure-gap: 8;
       --rough-fill-style: dots;
     }
+
+    .box6 {
+      --rough-border-width: 2;
+      --rough-border-color: blue;
+      --rough-fill: red;
+      --rough-roughness: 2.5;
+    }
   </style>
 </head>
 
@@ -58,9 +65,10 @@
   <div class="box3"></div>
   <div class="box4"></div>
   <div class="box5"></div>
+  <div class="box6"></div>
 
   <script>
-    CSS.paintWorklet.addModule('../src/rough-painter.js');
+    CSS.paintWorklet.addModule('../dist/rough-painter.bundled.js');
   </script>
 </body>
 

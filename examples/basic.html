@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      color: white;
+      background-image: paint(rough-painter);
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 18px;
+      border: none;
+      padding: 10px;
+      background-image: paint(rough-painter);
+    }
+
+    .card {
+      --rough-border-width: 3;
+      --rough-fill: red;
+      --rough-fill-weight: 9;
+      --rough-fill-style: zigzag;
+    }
+
+    input {
+      --rough-border-width: 3;
+      --rough-fill: white;
+      --rough-fill-style: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <p>
+      <input type="text" placeholder="Enter some text">
+    </p>
+  </div>
+
+  <script>
+    CSS.paintWorklet.addModule('../dist/rough-painter.bundled.js');
+  </script>
+</body>
+
+</html>

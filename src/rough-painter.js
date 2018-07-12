@@ -32,33 +32,30 @@ class RoughPainter {
     };
   }
 
+  _setFloatOption(properties, prop, option, options) {
+    if (properties.get(prop).length) {
+      options[option] = parseFloat(properties.get(prop).toString().trim());
+    }
+  }
+
+  _setStringOption(properties, prop, option, options) {
+    if (properties.get(prop).length) {
+      options[option] = properties.get(prop).toString().trim();
+    }
+  }
+
   paint(ctx, geometry, properties) {
     const options = {};
-    if (properties.get('--rough-roughness').length) {
-      options.roughness = parseFloat(properties.get('--rough-roughness').toString().trim());
-    }
-    if (properties.get('--rough-hachure-gap').length) {
-      options.hachureGap = parseFloat(properties.get('--rough-hachure-gap').toString().trim());
-    }
-    if (properties.get('--rough-hachure-angle').length) {
-      options.hachureAngle = parseFloat(properties.get('--rough-hachure-angle').toString().trim());
-    }
-    if (properties.get('--rough-fill').length) {
-      options.fill = properties.get('--rough-fill').toString().trim();
-    }
-    if (properties.get('--rough-fill-style').length) {
-      options.fillStyle = properties.get('--rough-fill-style').toString().trim();
-    }
-    if (properties.get('--rough-fill-weight').length) {
-      options.fillWeight = parseFloat(properties.get('--rough-fill-weight').toString().trim());
-    }
-    if (properties.get('--rough-border-width').length) {
-      options.strokeWidth = parseFloat(properties.get('--rough-border-width').toString().trim());
-    }
-    if (properties.get('--rough-border-color').length) {
-      options.stroke = properties.get('--rough-border-color').toString().trim();
-    }
+    this._setFloatOption(properties, '--rough-roughness', 'roughness', options);
+    this._setFloatOption(properties, '--rough-hachure-gap', 'hachureGap', options);
+    this._setFloatOption(properties, '--rough-hachure-angle', 'hachureAngle', options);
+    this._setFloatOption(properties, '--rough-fill-weight', 'fillWeight', options);
+    this._setFloatOption(properties, '--rough-border-width', 'strokeWidth', options);
+    this._setStringOption(properties, '--rough-fill-style', 'fillStyle', options);
+    this._setStringOption(properties, '--rough-fill', 'fill', options);
+    this._setStringOption(properties, '--rough-border-color', 'stroke', options);
     const resolvedOptions = Object.assign({}, this.defaultOptions, options);
+
     const offset = (options.strokeWidth || 0);
     const points = [[0 + offset, 0 + offset], [geometry.width - offset, 0 + offset], [geometry.width - offset, geometry.height - offset], [0 + offset, geometry.height - offset]];
     const opSets = [];
