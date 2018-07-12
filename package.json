@@ -1,0 +1,22 @@
+{
+  "name": "rough-paint",
+  "version": "0.1.0",
+  "description": "Using Houdini CSS Paint API with Rough.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshihn/rough-paint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pshihn/rough-paint/issues"
+  },
+  "homepage": "https://github.com/pshihn/rough-paint#readme",
+  "dependencies": {
+    "roughjs": "^2.2.3"
+  }
+}

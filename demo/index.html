@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+    }
+
+    div {
+      display: inline-block;
+      vertical-align: top;
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      background-image: paint(rough-painter);
+    }
+
+    .box1 {
+      --rough-border-width: 2;
+      --rough-border-color: blue;
+    }
+
+    .box2 {
+      --rough-fill: red;
+    }
+
+    .box3 {
+      --rough-border-width: 5;
+      --rough-border-color: blue;
+      --rough-fill: red;
+      --rough-fill-weight: 5;
+      --rough-hachure-gap: 10;
+      --rough-hachure-angle: 30;
+    }
+
+    .box4 {
+      --rough-border-width: 3;
+      --rough-border-color: green;
+      --rough-fill: green;
+      --rough-hachure-gap: 8;
+      --rough-fill-style: zigzag;
+    }
+
+    .box5 {
+      --rough-border-width: 3;
+      --rough-border-color: green;
+      --rough-fill: green;
+      --rough-hachure-gap: 8;
+      --rough-fill-style: dots;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  <div class="box5"></div>
+
+  <script>
+    CSS.paintWorklet.addModule('../src/rough-painter.js');
+  </script>
+</body>
+
+</html>
