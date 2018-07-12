@@ -30,6 +30,7 @@ For example:
 
 ## Examples
 ![sample image](https://i.imgur.com/9hQujNk.png)
+
 View the [examples folder](https://github.com/pshihn/rough-paint/tree/master/examples).
 
 ## CSS Properties
