@@ -1,5 +1,5 @@
 # rough-paint
-Using Houdini CSS Paint API with [Rough.js](https://roughjs.com/)
+Using Houdini CSS [Paint API](https://developers.google.com/web/updates/2018/01/paintapi) with [Rough.js](https://roughjs.com/)
 
 Any element can be styled with rough.js using CSS only.
 
