@@ -57,3 +57,6 @@ Following properties corresponding to [rough.js options](https://github.com/pshi
 `--rough-border-width` - Draw a rough border with the specified numeric width.
 
 `--rough-border-color` - Color of the rough border.
+
+## License
+[MIT License](https://github.com/pshihn/rough-paint/blob/master/LICENSE) (c) [Preet Shihn](https://twitter.com/preetster)
